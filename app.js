@@ -10,8 +10,7 @@ const userRouter = require("./routes/userRouter");
 
 const db = require("./config/mongoose-connecttion");
 
-// Allow the frontend dev server (Vite, default port 5173) to call this API
-// with cookies included. Update FRONTEND_URL if you deploy the frontend elsewhere.
+
 const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173";
 
 app.use(

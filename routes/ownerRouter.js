@@ -16,8 +16,7 @@ router.get("/", function (req, res) {
     res.send("owner router works");
 });
 
-// One-time / secret-key protected admin registration.
-// Requires an adminSecret so random users can't create admin accounts.
+
 router.post("/register", async function (req, res) {
     try {
         const { fullname, email, password, gstin, adminSecret } = req.body;
@@ -125,7 +124,7 @@ router.delete("/products/:id", isLoggedIn, isOwner, async function (req, res) {
     }
 });
 
-// View all orders placed by all users
+
 router.get("/orders", isLoggedIn, isOwner, async function (req, res) {
     try {
         const orders = await orderModel.find().populate("user", "fullname email").sort({ createdAt: -1 });

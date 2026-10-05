@@ -1,6 +1,3 @@
-// Seeds the database with sample bag products for testing/demo purposes.
-// Run with: node seed.js
-// (Run this from inside the CarryCraft backend folder, with MongoDB running.)
 
 const mongoose = require("mongoose");
 const config = require("config");

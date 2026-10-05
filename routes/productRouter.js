@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const productModel = require("../models/product-model");
 
-// GET /product?search=tote&category=leather&minPrice=0&maxPrice=5000
+
 router.get("/", async function (req, res) {
     try {
         const { search, category, minPrice, maxPrice } = req.query;

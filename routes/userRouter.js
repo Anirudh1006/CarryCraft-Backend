@@ -65,7 +65,7 @@ router.get("/me", isLoggedIn, async function (req, res) {
     res.json({ success: true, user });
 });
 
-// ---- Cart ----
+
 
 router.get("/cart", isLoggedIn, async function (req, res) {
     try {
